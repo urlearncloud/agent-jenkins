@@ -1,17 +1,17 @@
-pipeline {
-    agent any
+pipeline{
+    agent {label 'jenkins agent'}
 
     stages {
         stage('code clone') {
             steps {
                 echo "code cloning hogya repo se"
-                git url: "https://github.com/iam-mohanty/docker-jenkins-declarative-nodeapp.git"
+                git url: "https://github.com/urlearncloud/j-pro.git"
             }
         }
         stage('code build') {
             steps {
                 echo "code build v karliye"
-                sh "docker build . -t nodeappimg:latest"
+                sh "docker build . -t mywebappimg:latest"
             }
         }
         stage('code test') {
