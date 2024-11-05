@@ -5,7 +5,7 @@ pipeline{
         stage('code clone') {
             steps {
                 echo "code cloning hogya repo se"
-                git url: "https://github.com/urlearncloud/j-pro.git"
+                git url: "https://github.com/urlearncloud/agent-jenkins.git"
             }
         }
         stage('code build') {
